@@ -14,4 +14,11 @@
         internal int energy;
         internal string name;
     }
+
+    class Skill
+    {
+        internal int damage;
+        internal int energyCost;
+        internal string name;
+    }
 }
