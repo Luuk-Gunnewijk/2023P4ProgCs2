@@ -12,35 +12,25 @@
             Console.WriteLine(mon.health == -100);
 
             Console.WriteLine(mon.energy == -20);
+
+            Console.WriteLine("TestSkillFunctions");
+            ConsoleMon casterMon = new ConsoleMon();
+            ConsoleMon targetMon = new ConsoleMon();
+            Skill skill = new Skill()
+            {
+                damage = 100,
+                energyCost = 20,
+            };
+            skill.UseOn(targetMon, casterMon);
+
+            Console.WriteLine(targetMon.health == -100);
+
+            Console.WriteLine(casterMon.energy == -20);
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
             TestConsoleMonFunctions();
         }
-    }
-
-    class ConsoleMon
-    {
-        internal int health;
-        internal int energy;
-        internal string name;
-
-        public void TakeDamage(int damage)
-        {
-            health -= damage;
-        }
-
-        public void DepleteEnergy(int energy)
-        {
-            this.energy -= energy;
-        }
-    }
-
-    class Skill
-    {
-        internal int damage;
-        internal int energyCost;
-        internal string name;
     }
 }
