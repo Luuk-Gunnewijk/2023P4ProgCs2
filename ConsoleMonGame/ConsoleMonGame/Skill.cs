@@ -12,10 +12,17 @@ namespace ConsoleMonGame
             internal int energyCost;
             internal string name;
 
+        internal Element element;
+
         public void UseOn(ConsoleMon target,ConsoleMon caster) 
         {
             caster.DepleteEnergy(energyCost);
             target.TakeDamage(damage);
+
+            if (target.weakness == element)
+            {
+                target.TakeDamage( damage / 2);
+            }
         }
     }
 }

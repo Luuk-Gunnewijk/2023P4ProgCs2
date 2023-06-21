@@ -14,6 +14,8 @@ namespace ConsoleMonGame
 
         private List<Skill> skill = new List<Skill>();
 
+        internal Element weakness;
+
         public void TakeDamage(int damage)
         {
             health -= damage;

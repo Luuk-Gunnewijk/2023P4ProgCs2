@@ -13,6 +13,10 @@
 
             Console.WriteLine(mon.energy == -20);
 
+        }
+
+        static void TestSkillFunctions()
+        {
             Console.WriteLine("TestSkillFunctions");
             ConsoleMon casterMon = new ConsoleMon();
             ConsoleMon targetMon = new ConsoleMon();
@@ -23,14 +27,16 @@
             };
             skill.UseOn(targetMon, casterMon);
 
-            Console.WriteLine(targetMon.health == -100);
+            Console.WriteLine(targetMon.health == -150);
 
             Console.WriteLine(casterMon.energy == -20);
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
             TestConsoleMonFunctions();
+            TestSkillFunctions();
         }
     }
 }
